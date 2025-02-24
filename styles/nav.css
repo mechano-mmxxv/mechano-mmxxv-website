@@ -1,0 +1,350 @@
+@font-face {
+    font-family: 'god';
+    src: url('fonts/knight.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('fonts/knight.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    width: auto;
+    height: auto;
+}
+/* Header Styling */
+header {
+
+    padding: 40px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+/* Logo Styling */
+.logo {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Hero Header Styling */
+.hero-header {
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/back.jpg'); 
+    background-size: cover; /* Cover full screen */
+    background-position: center center; /* Center the background */
+    background-repeat: no-repeat; /* Prevent repeating */
+    margin: 0;
+    min-width: fit-content;
+    /* height: 100vh; Full viewport height */
+    z-index: 100;
+}
+
+/* Wrapper for Content */
+.wrapper {
+    width: 100%; 
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section Container */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+/* Hero Image */
+.container .hero-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 15px solid #454141;
+    box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+    animation: fadeInScale 2s ease-out;
+}
+
+/* Animation for Hero Image */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Larger Screens */
+@media (min-width: 1080px) {
+    .container .hero-pic {
+        width: 400px;
+        height: 400px;
+        border: 15px solid #444;
+        box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* Hero Image Hover Effect */
+.hero-pic img {
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.hero-pic img:hover {
+    transform: scale(1.2);
+}
+
+/* Hero Text Section */
+.hero-text {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hero Subtitle */
+.hero-text h5 {
+    color: #e5e5e5;
+    font-size: 14px;
+}
+
+.hero-text h5 span {
+    color: #007ced;
+    font-size: 16px;
+}
+
+/* Hero Title */
+.hero-text h1 {
+    color: #007ced;
+    font-size: 3rem;
+}
+
+/* Hero Paragraph */
+.hero-text p {
+    font-family: 'godofwar', Times, serif;
+    color: #e5e5e5;
+}
+
+/* Button Group */
+.btn-group {
+    margin: 45px 0;
+}
+
+/* Buttons */
+.btn-group .btn {
+    border-color: #d5d5d5;
+    color: #fff;
+    background-color: #333;
+    padding: 12px 25px;
+    margin: 5px 0px;
+    margin-right: 7px;
+    border-radius: 30px;
+    border: 2px solid #e5e5e5;
+    box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+    animation: colorFade 3s infinite;
+}
+
+/* Button Color Fade Animation */
+@keyframes colorFade {
+    0% {
+        background-color: #333;
+        border-color: #e5e5e5;
+    }
+    50% {
+        background-color: #007ced;
+        border-color: #007ced;
+    }
+    100% {
+        background-color: #333;
+        border-color: #e5e5e5;
+    }
+}
+
+.btn.active {
+    border-color: #007ced;
+}
+
+/* Social Media Icons */
+.hero-text .social i {
+    color: #e5e5e5;
+    font-size: 25px;
+    margin-right: 15px;
+    transition: 0.5s;
+}
+
+@media (min-width: 1080px) {
+    .hero-text .social i {
+        font-size: 35px;
+    }
+}
+
+/* Social Icons Hover */
+.hero-text .social i:hover {
+    color: #007ced;
+    transform: rotate(360deg);
+}
+
+/* Responsive Design */
+@media (max-width: 930px) {
+    .container {
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+
+    .hero-text {
+        padding: 40px 0px;
+        text-align: center;
+    }
+}
+
+.logo i {
+    width: 45px;
+    height: 45px;
+    background-color: #007ced;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    border: 2px solid #ccc;
+    background-image: url('../images/model1.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logo .logo-text {
+    font-family: "Iceberg", serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* Navigation Menu */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation Toggle Button */
+nav .togglebtn {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 45px;
+    right: 3%;
+    z-index: 5;
+    cursor: pointer;
+    display: none;
+}
+
+nav .togglebtn span {
+    display: block;
+    background-color: #007ced;
+    margin: 5px 0px;
+    width: 100%;
+    height: 3px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Navigation Links */
+nav .navlinks {
+    font-family: 'godofwar', sans-serif;
+    list-style-type: none;
+}
+
+nav .navlinks li {
+    display: inline-block;
+}
+
+nav .navlinks li a {
+    color: #e5e5e5;
+    margin-right: 2.5rem;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+nav .navlinks li a:hover {
+    color: #007ced;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 930px) {
+    nav .togglebtn {
+        display: initial;
+    }
+
+    /* Toggle Button Animation */
+    .click {
+        top: 45px;
+    }
+
+    .click span {
+        position: absolute;
+        margin-top: 12px;
+    }
+
+    .click span:first-child {
+        transform: rotate(-40deg);
+    }
+
+    .click span:nth-child(2) {
+        opacity: 0;
+        margin: 0;
+    }
+
+    .click span:last-child {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    /* Mobile Navigation Menu */
+    nav .navlinks {
+        font-size: 45px;
+        position: absolute;
+        top: 110px;
+        right: -100%;
+        bottom: 0;
+        width: 60%;
+        height: 55vh;
+        background-color: rgba(46, 55, 148, 0.5);
+        backdrop-filter: blur(10px);
+        z-index: 3;
+        box-shadow: 5px 13px 30px rgba(0, 0, 0, 0.1);
+        transition: 0.5s ease-in-out;
+        padding: 25px 0px;
+        border-radius: 15px;
+        text-align: center;
+    }
+
+    nav .navlinks li {
+        display: block;
+    }
+
+    nav .navlinks li a {
+        font-family: MyCustomFont;
+        font-size: 25px;
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    nav .navlinks.open {
+        right: 0;
+    }
+}
