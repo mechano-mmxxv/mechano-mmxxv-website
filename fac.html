@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechano MMXXV|About_US</title>
+    <link rel="icon" href="images/model1.jpg" type="image/png">
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const element = document.querySelector('.gallery .image-container .image-box a');
+            
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('shake'); // Add the shake class when the element is in view
+                    }
+                });
+            });
+    
+            observer.observe(element); // Start observing the element
+        });
+    </script>
+    
+    <style>
+        @font-face {
+    font-family: 'MyCustomFont';
+    src: url('fonts/knight.ttf') format('woff2');
+        
+    font-weight: normal;  /* Optional */
+    font-style: normal;   /* Optional */
+  }
+        * {
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: capitalize;
+            transition: all .2s cubic-bezier(.34,1.12,.68,1.31);
+        }
+
+        .gallery {
+            min-height: 100vh;
+            background: #e70808;
+            padding-bottom: 100px;
+            text-align: center;
+        }
+
+        .gallery .controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px 0;
+            list-style: none;
+        }
+
+        .gallery .controls .buttons {
+    height: 40px;
+    width: 140px;
+    background-image: 
+        linear-gradient(to bottom, #333, #222), /* Dark gradient background */
+        repeating-linear-gradient(60deg, rgba(255, 255, 255, 0.2) 0 10px, transparent 10px 20px), /* Striped pattern */
+        linear-gradient(to bottom, #444, #111); /* Deep black gradient */
+    color: #fff;
+    font-family: monospace;
+    font-size:15px;
+    font-weight: bold;
+    padding-top: 4px;
+    text-shadow: 0 1px 0 #999;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 
+        0 10px 0 rgba(0, 0, 0, 0.5),
+        0 5px 0 #666,
+        0 4px 0 7px #fff,
+        0 0 30px 10px #aaa;
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Striped bar effect on top */
+.gallery .controls .buttons::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0px; /* Slight shift to align properly */
+
+    width: 100%;
+    height: 100px; /* Adjust height of the bar */
+    background: repeating-linear-gradient(90deg, #fff 0 10px, transparent 10px 20px); /* White striped effect */
+    opacity: 0.5;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* Border animation effect */
+.gallery .controls .buttons::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    opacity: 0;
+    transform: scale(1.2);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.gallery .controls .buttons:hover::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Click effect */
+.gallery .controls .buttons:active {
+    box-shadow: 
+        0 0px 0 rgba(0, 0, 0, 0.5),
+        0 0px 0 #666,
+        0 0px 0 7px #fff,
+        0 0 30px 30px #aaa;
+    transform: translateY(10px);
+}
+
+
+        .gallery .controls .buttons.active {
+            background: rgb(72, 67, 220);
+            color: #fff;
+            font-size:20px;
+            color: #d4f306;
+        }
+
+        .gallery .image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .gallery .image-container .image-box {
+    width: 350px;
+    border-radius:15% ;
+    text-align: center;
+    margin: 20px;
+    overflow: hidden; /* Ensures the rounded corners are visible */
+}
+
+
+      /* Add the basic styles for the image container link */
+.gallery .image-container .image-box a {
+    display: block;
+    overflow: hidden;
+    border-radius: 15%;
+    border: 15px solid #fff;
+    box-shadow: 5px 13px 10px rgba(26, 0, 223, 0.3);
+    transition: all 0.3s ease; /* Smooth transition for other changes */
+}
+
+/* Define the shake animation */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+/* Apply the shaking effect immediately when page loads */
+.gallery .image-container .image-box a {
+    animation: shake 0.5s ease; /* Trigger the shaking effect */
+    animation-iteration-count: 1; /* Only run the animation once */
+}
+/* Shaking effect class */
+.shake {
+    animation: shake 0.5s ease;
+    animation-iteration-count: 1;
+}
+
+
+        .gallery .image-container .image-box img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery .image-container .image-box:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Image description */
+        .gallery .image-container .image-box .description {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+        * {
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: capitalize;
+            transition: all .2s cubic-bezier(.34,1.12,.68,1.31);
+        }
+
+        /* Sticky Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #222;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            color: #3109e4;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: MyCustomFont;
+        }
+
+        .navbar ul li a:hover {
+            color: #0707c3;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .navbar ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 50%;
+    height: 500px;
+    background: rgba(73, 68, 68, 0.6); /* Semi-transparent red background */
+    backdrop-filter: blur(8px); /* Apply blur effect to create the frosted glass look */
+    font-size: 45px;
+    border-radius: 15px; /* Rounded corners for a smoother, modern look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    padding: 20px;
+    transition: all 0.3s ease; /* Smooth transition for interactive changes */
+}
+
+
+            .navbar ul.active {
+                display: flex;
+               
+            }
+
+            .menu-toggle {
+                font-size: 25px;
+                display: block;
+            }
+        }
+
+        .gallery {
+            min-height: 100vh;
+            background: #eee;
+            padding-top: 80px;
+            padding-bottom: 100px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+<div class="navbar">
+   <a href="index.html"> <div class="logo">🔙</div></a>
+    <div class="menu-toggle">☰</div>
+    <ul>
+        <li><a href="workshops.html">Workshops</a></li>
+        <li><a href="tech.html">Tech Events</a></li>
+        <li><a href="nontech.html">Non-Tech Events</a></li>
+        <li><a href="accomadation.html">Accomadation</a></li>
+        <li><a href="dra.html">Sponsors</a></li>
+        <li><a href="fac.html">About us</a></li>
+        <li><a href="scroll.html">contact-us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+    </ul>
+</div>
+<div class="gallery">
+    <ul class="controls">
+        <li class="buttons active" data-filter="all">All</li>
+        <li class="buttons" data-filter="ice-cream">Chief Guests</li>
+        <li class="buttons" data-filter="chocolate">Our Patrons</li>
+        <li class="buttons" data-filter="cake">Chair Person</li>
+        <li class="buttons" data-filter="juice">Coordinators</li>
+        <li class="buttons" data-filter="sandwich">Organizing Committee</li>
+    </ul>
+
+    <div class="image-container">	
+        <div class="image-box ice-cream">
+            <a href="fac/raj.jpg">
+                <img src="fac/raj.jpg" alt="Dr.D.Rajya Lakshmi ">
+            </a>
+            <div class="description">Dr.D.Rajya Lakshmi <br>💐💐💐 <br>Hon'ble Vice Chancellor(i/c)</div>
+        </div>
+        <div class="image-box ice-cream">
+            <a href="fac/reg.jpg">
+                <img src="fac/reg.jpg" alt="Prof. Dr.G.Jayasuma">
+            </a>
+            <div class="description">Prof. Dr.G.Jayasuma<br> 💐💐💐 <br>Registrar</div>
+        </div>
+       
+
+        <div class="image-box chocolate">
+            <a href="fac/princ.jpg">
+                <img src="fac/princ.jpg" alt="Prof. R. Rajeswara Rao">
+            </a>
+            <div class="description">Prof. R. Rajeswara Rao<br> 💐💐💐 <br>Principal(i/c)</div>
+        </div>
+        <div class="image-box chocolate">
+            <a href="fac/vc.jpg">
+                <img src="fac/vc.jpg" alt="Dr. G. J. Naga Raju">
+            </a>
+            <div class="description">Dr. G. J. Naga Raju<br> 💐💐💐 <br>Vice Principal(i/c)</div>
+        </div>
+
+        <div class="image-box cake">
+            <a href="fac/hod.jpg">
+                <img src="fac/hod.jpg" alt="Dr.K.Srinivasa prasad">
+            </a>
+            <div class="description">Dr.K.Srinivasa prasad<br> 💐💐💐 <br>Assistant Professor and Head of the Department</div>
+        </div>
+       
+
+        <div class="image-box juice">
+            <a href="fac/mani.jpg">
+                <img src="fac/mani.jpg" alt="Sri.V.Mani Kumar">
+            </a>
+            <div class="description">Sri.V.Mani Kumar<br> 💐💐💐 <br>Assistant Professor & Dept of ME</div>
+        </div>
+        <div class="image-box juice">
+            <a href="fac/nell.jpg">
+                <img src="fac/nell.jpg" alt="Dr.C.Neelima Devi">
+            </a>
+            <div class="description">Dr.C.Neelima Devi<br> 💐💐💐 <br>Assistant Professor & Dept of ME</div>
+        </div>
+
+        <div class="image-box sandwich">
+            <a href="fac/rajesh.jpg">
+                <img src="fac/rajesh.jpg" alt="Sri.D.Rajesh">
+            </a>
+            <div class="description">Sri.D.Rajesh<br> 💐💐💐 <br>Assistant Professor(C) & Dept of ME</div>
+        </div>
+        <div class="image-box sandwich">
+            <a href="fac/komal.jpg">
+                <img src="fac/komal.jpg" alt="Sri.M.Komaleswara Rao">
+            </a><div class="description">Sri.M.Komaleswara Rao<br> 💐💐💐 <br>Assistant Professor(C) & Dept of ME</div>
+        </div>
+        <div class="image-box sandwich">
+            <a href="fac/kuh.jpg">
+                <img src="fac/kuh.jpg" alt="Sri.Abdul Khurshid">
+            </a>
+            <div class="description">Sri.Abdul Khurshid<br> 💐💐💐 <br>Assistant Professor(C) & Dept of ME</div>
+        </div>
+        <div class="image-box sandwich">
+            <a href="fac/kc.jpg">
+                <img src="fac/kc.jpg" alt="Sri.L.Krishna Chaitanya">
+            </a><div class="description">Sri.L.Krishna Chaitanya<br> 💐💐💐 <br>Assistant Professor(C) & Dept of ME</div>
+        </div>
+        <div class="image-box sandwich">
+            <a href="fac/gowtham.jpg">
+                <img src="fac/gowtham.jpg" alt="Sri.A.V.S.Gowtham">
+            </a>
+            <div class="description">Sri.A.V.S.Gowtham<br> 💐💐💐 <br>Assistant Professor(C) & Dept of ME</div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Magnific Popup JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $('.buttons').click(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+        var filter = $(this).attr('data-filter');
+        
+        if(filter == 'all'){
+            $('.image-box').show(400);
+        } else {
+            $('.image-box').not('.' + filter).hide(200);
+            $('.image-box').filter('.' + filter).show(400);
+        }
+    });
+
+    $('.gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        gallery: { enabled: true }
+    });
+});
+</script>
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $('.menu-toggle').click(function(){
+        $('ul').toggleClass('active');
+    });
+});
+</script>
+
+
+</body>
+</html>

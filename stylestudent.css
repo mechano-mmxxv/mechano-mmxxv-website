@@ -1,0 +1,212 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('fonts/knight.ttf') format('woff2');
+        
+    font-weight: normal;  /* Optional */
+    font-style: normal;   /* Optional */
+  }
+  body{
+    margin: 0;
+    background-image: url(im/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.home{
+    text-decoration:block;
+    
+    font-size: larger;
+    margin-left: 15px;
+}
+.slider{
+    width: 90vw;
+    overflow: auto;
+    padding: 100px;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    background-color: #fff3;
+    border-radius: 20px;
+}
+
+.slider::-webkit-scrollbar{
+    width: 0;
+}
+.slider .form{
+    width: max-content;
+    --left: 0;
+    transform: translateX(var(--left));
+}
+.title{
+    padding: 20px 0;
+    color: #fff;
+    text-shadow: 0 0 10px #0007;
+    font-weight: 500;
+    font-size: large;
+}
+.title button{
+    border-radius: 20px;
+    border: none;
+    font-family: system-ui;
+    font-size:30px;
+}
+.slider .form .item{
+    width: 250px;
+    height: 300px;
+    display: inline-block;
+    margin-right: 20px;
+    transform: perspective(10px);
+    transform-style: preserve-3d;
+}
+.slider .form .item .content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform .5s;
+}
+.slider .form .item .content .des{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    backdrop-filter: blur(10px);
+    color: #fff;
+    font-family: monospace;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.slider .form .item .content .des button{
+    background-color: #eeeeee;
+    border: none;
+    border-radius: 10px;
+    font-size: small;
+}
+.slider .form.left .item .content{
+    transform: rotateY(-1deg) scale(0.8);
+}
+.slider .form.right .item .content{
+    transform: rotateY(1deg) scale(0.8);
+}
+.slider .form .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+    
+    /* Navigation Bar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(51, 51, 51, 0.6); /* Semi-transparent background color */
+    backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    height: 25px;
+    top: 0;
+    z-index: 1000; /* Ensure navbar is always on top */
+    border-radius: 15px; /* Optional: Rounded corners for a softer look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Adds depth with a subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition effect for hover or state changes */
+}
+
+    .navbar .logo a {
+        font-size: 24px;
+        font-family: "Turret Road", serif;
+        font-weight: bold;
+        color: #fff;
+    }
+    
+    .nav-links {
+       font-weight: bolder;
+        font-family: "Caveat", serif;
+        list-style-type: none;
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 0 15px;
+    }
+    
+    .nav-links li a {
+        font-family: MyCustomFont;
+        font-size: 18px;
+        color: rgb(253, 249, 249);
+        padding: 8px 12px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .nav-links li a:hover {
+        background-color: #4c0cd5;
+        border-radius: 15px;
+    }
+    
+    /* Menu Icon for Mobile */
+    .menu-icon {
+        display: none;
+        cursor: pointer;
+    }
+    
+    .menu-icon span {
+        font-size: 40px;
+        padding-right: 15px;
+        color: rgb(234, 224, 224);
+    }
+    
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;  /* Initially hide the menu */
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgba(51, 48, 48, 0.6); /* Semi-transparent red background */
+        backdrop-filter: blur(5px); /* Apply blur effect to the background */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow to enhance depth */
+        text-decoration: none;  /* Fix text decoration issue */
+        border-radius: 20px;  /* Rounded corners for a smoother appearance */
+        padding: 20px;
+        transition: all 0.9s ease; /* Smooth transition for hover effects */
+    }
+}
+
+
+    .nav-links.active {
+        display: flex; /* Show the menu when active class is added */
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+.des {
+    font-size: large;  /* Correctly setting the font size */
+    color: rgb(13, 158, 210);      /* Correctly setting the font color */
+}
+
+
+.co{
+    
+  font-family: "Bungee Outline", serif;
+}
+.item{ font-family: "Pacifico", serif;}
+   

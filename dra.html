@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="nav.css?i=1">
+    <title>sponsers</title>
+    <link rel="stylesheet" href="sty.css">
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/nav.js"></script>
+    <script>
+      document.querySelector('.overlay-menu').style.backgroundColor = '#2ecc71'; // Changes to green
+
+      </script>
+    </head>
+    <style>
+      body {
+    background: #E2DFD2;
+    overflow: hidden;
+  }  
+      /* Other existing styles remain unchanged */
+      .banner {
+          width: 100%;
+          height: 100vh;
+          text-align: center;
+          overflow: hidden;
+          position: relative;
+          z-index: -1000;
+      }
+      /* (Your existing styles continue as they are) */
+      </style>
+      
+      <body>
+         <a href="index.html"><div class="corner-circle">
+            <img src="logo.png" alt="Corner Image">
+          </div></a>
+        
+       
+          <!-- Banner Content -->
+          <div class="banner">
+              <div class="slider" style="--quantity: 4">
+                 
+                  <div class="item" style="--position: 5">
+                      <a href="https://example.com/dragon_5">
+                          <img src="dra/dragon_1.jpg" alt="Dragon 5">
+                      </a>
+                  </div>
+                  <div class="item" style="--position: 6">
+                      <a href="https://example.com/dragon_6">
+                          <img src="dra/dragon_2.jpg" alt="Dragon 6">
+                      </a>
+                  </div>
+                  <div class="item" style="--position: 7">
+                      <a href="https://example.com/dragon_7">
+                          <img src="dra/eye.jpg" alt="Dragon 7">
+                      </a>
+                  </div>
+                  <div class="item" style="--position: 8">
+                      <a href="https://example.com/dragon_8">
+                          <img src="dra/mt.jpg" alt="Dragon 8">
+                      </a>
+                  </div>
+               
+              </div>
+              <div class="content">
+                  <h1 data-content="SPONSERS">
+                      SPONSERS
+                  </h1>
+                  <div class="author">
+                      <h2>-</h2>
+                      <p>SPONSERS</p>
+                      <p>
+                          &nbsp;&nbsp;Our Technical Partners
+                      </p>
+                  </div>
+                  <div class="model"></div>
+              </div>
+          </div>
+
+
+         
+        <style>
+        /* General Menu Item Styles */
+        .menu-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: rgb(210, 0, 0);
+            font-size: 16px;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            aspect-ratio: 7/9; /* Maintain consistent aspect ratio */
+            width: 100%; /* Ensure full width of container */
+            max-width: 300px; /* Limit max width for large screens */
+            height: 200px; /* Fixed height for uniform image size */
+            margin: 10px auto; /* Increased vertical spacing between items */
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        /* Ensure all images maintain the same size */
+        .menu-item img {
+            position: absolute;
+            top: 0;  /* Keep the image at the top of the container */
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure images cover their container */
+            z-index: 0;
+            transition: transform 0.3s ease; /* Smooth transition for shifting */
+        }
+        /* Shift the first image to the top of the screen */
+        .hometour1 img {
+            position: absolute;
+            top: -100px; /* Adjust this value to shift the image up */
+            left: 0;
+            width: 100%;
+            height: 200px; /* Adjust height as needed */
+            object-fit: cover;
+        }
+        /* Overlay Text Styling */
+        .menu-item span {
+            z-index: 1;
+            position: relative;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+            border-radius: 8px;
+        }
+        .overlay-menu ul {
+            gap: 150px; /* Adjust spacing between list items */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers items */
+        }
+        /* Background Images for menu items */
+        .hometour1 {background-image: url('frame8.png');}
+        .competitions1 {background-image: url('frame8.png');}
+        .hometour {background-image: url('frame8.png');}
+        .competitions {background-image: url('frame8.png');}
+        .workshops {background-image: url('frame8.png');}
+        .initiatives {background-image: url('frame8.png');}
+        .lectures {background-image: url('frame8.png');}
+        .shows {background-image: url('frame8.png');}
+        .summit {background-image: url('frame8.png');}
+        /* Fixed Social Media Icons on the left and right */
+        .socialmedia_nav, .socialmedia_nav2 {
+            position: fixed;  /* Fixed positioning */
+            top: 50%;           /* Center vertically */
+            transform: translateY(-50%); /* Center icons properly */
+            z-index: 1000; /* Ensure icons stay on top of other content */
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .socialmedia_nav {
+            left: 0; /* Fixed to the left side */
+        }
+        .socialmedia_nav2 {
+            right: 0; /* Fixed to the right side */
+        }
+        .socialmedia_nav a, .socialmedia_nav2 a {
+            text-decoration: none;
+            color: white; /* Or any other color */
+            font-size: 24px; /* Adjust icon size */
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        .socialmedia_nav a:hover, .socialmedia_nav2 a:hover {
+            transform: scale(1.2); /* Slight zoom effect on hover */
+            color: #ff5722; /* Optional: Change color on hover */
+        }
+        </style>
+        <script>
+        // Ensure initial size and alignment of items on page load
+        function setInitialMenuItems() {
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach((item) => {
+                item.style.transform = 'scale(1)'; // Set all items to default size
+            });
+        }
+        // Set initial scaling on page load
+        window.addEventListener('load', setInitialMenuItems);
+        </script>   
+        </head>
+        <script src="js/jquery-2.1.1.js"></script>
+        <script src="js/nav.js"></script>
+        </script>
+      </body>
+      
+</html>

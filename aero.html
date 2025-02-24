@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Page</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            position: relative;
+        }
+
+        /* Main Container */
+        .container {
+            position: relative;
+            width: 80%;
+            max-width: 1000px;
+            text-align: center;
+        }
+
+        /* Big Image without Border */
+        .big-image {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Left Top Corner Image (image-1) */
+        .left-top-corner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: auto;
+        }
+
+        /* Right Top Corner Image (image-2) */
+        .right-top-corner {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: auto;
+        }
+
+        /* Description */
+        .description {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        /* Register Button */
+        .register-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .register-btn:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Small Image on the Left Top Corner -->
+        <img src="logo.png" alt="Left Top Corner Image" class="left-top-corner">
+
+        <!-- Small Image on the Right Top Corner -->
+        <img src="dra/menu.webp" alt="Right Top Corner Image" class="right-top-corner">
+
+        <!-- Big Image without Border -->
+        <img src="dra/posteraero.png" alt="Big Image" class="big-image">
+
+        <!-- Description Below the Big Image -->
+        <div class="description">
+            <p>This is a description of the big image. It could be about the content or anything related to the image shown above.</p>
+        </div>
+
+        <!-- Register Button -->
+        <button class="register-btn">Register</button>
+    </div>
+</body>
+</html>
