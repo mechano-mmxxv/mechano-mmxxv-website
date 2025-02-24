@@ -1,6 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
 @import url('https://fonts.cdnfonts.com/css/poppins');
 /* Top-left corner circle */
+
 .corner-circle {
   position: absolute;
   top: 0px; /* Adjust the distance from the top */
