@@ -3,187 +3,208 @@
 @import url('https://fonts.cdnfonts.com/css/knightshade');
 @import url('https://fonts.cdnfonts.com/css/dungeon-depths');
 
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('fonts/knight.ttf') format('woff2');
+    font-weight: normal; /* Optional */
+    font-style: normal; /* Optional */
+}
 
 @font-face {
-  font-family: 'MyCustomFont';
-  src: url('fonts/knight.ttf') format('woff2');
-      
-  font-weight: normal;  /* Optional */
-  font-style: normal;   /* Optional */
+    font-family: 'ancient';
+    src: url('fonts/Ancient\ Medium.ttf') format('woff2');
 }
-@font-face {
-  font-family: 'ancient';
-  src: url('fonts/Ancient\ Medium.ttf') format('woff2');
-}
-@font-face {
-  font-family: 'roadrage';
-  src: url('fonts//Road_Rage.otf') format('woff2');
 
-}
 @font-face {
-  font-family: 'bringrace';
-  src: url('fonts/Bring\ Race.otf') format('woff2');
+    font-family: 'roadrage';
+    src: url('fonts//Road_Rage.otf') format('woff2');
+}
+
+@font-face {
+    font-family: 'bringrace';
+    src: url('fonts/Bring\ Race.otf') format('woff2');
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
+
 button {
-  padding: 5px 20px;
-  border: 1px solid #0077cc; /* Blue border */
-  border-radius: 20px;
-  background-image: 
-      linear-gradient(to bottom, #add8e6, transparent 50% 90%, #b0e0e6), /* Light blue gradient */
-      repeating-linear-gradient(60deg, #2f4f4f 0 10px, transparent 10px 20px), /* Blue repeating pattern */
-      linear-gradient(to bottom, #4682b4, #5f9ea0); /* Deep blue to slate blue gradient */
-  color: #fff; /* White text */
-  font-family: monospace;
-  font-weight: bold;
-  text-shadow: 0 1px 0 #a9c7f5; /* Soft blue text shadow */
-  box-shadow: 
-      0 10px 0 #0005, /* Shadow for depth */
-      0 5px 0 #4682b4, /* Blue shadow for pop */
-      0 4px 0 7px #fff, /* White highlight */
-      0 0 30px 10px #3b7dd8; /* Glowing blue effect */
-  transition: 0.5s;
+    padding: 5px 20px;
+    border: 1px solid #0077cc; /* Blue border */
+    border-radius: 20px;
+    background-image:
+        linear-gradient(to bottom, #add8e6, transparent 50% 90%, #b0e0e6), /* Light blue gradient */
+        repeating-linear-gradient(60deg, #2f4f4f 0 10px, transparent 10px 20px), /* Blue repeating pattern */
+        linear-gradient(to bottom, #4682b4, #5f9ea0); /* Deep blue to slate blue gradient */
+    color: #fff; /* White text */
+    font-family: monospace;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #a9c7f5; /* Soft blue text shadow */
+    box-shadow:
+        0 10px 0 #0005, /* Shadow for depth */
+        0 5px 0 #4682b4, /* Blue shadow for pop */
+        0 4px 0 7px #fff, /* White highlight */
+        0 0 30px 10px #3b7dd8; /* Glowing blue effect */
+    transition: 0.5s;
 }
 
 button:active {
-  box-shadow: 
-      0 0px 0 #0005,
-      0 0px 0 #4682b4, /* Blue shadow when active */
-      0 0px 0 7px #fff,
-      0 0 30px 30px #3b7dd8; /* Glowing blue effect on active state */
-  transform: translateY(5px); /* Button pressed effect */
+    box-shadow:
+        0 0px 0 #0005,
+        0 0px 0 #4682b4, /* Blue shadow when active */
+        0 0px 0 7px #fff,
+        0 0 30px 30px #3b7dd8; /* Glowing blue effect on active state */
+    transform: translateY(5px); /* Button pressed effect */
 }
 
 .container {
-  display: flex;
-  row-gap: 15px;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+    overflow: hidden;
+    text-align: center; /* Ensures text is centered */
 }
+
 .container .image {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
+
 .container header {
-  font-family: 'MyCustomFont';
-  letter-spacing: 1px;
-  font-size: 60px;
-  color: #fff;
-  text-align: center;
-  display: inline-block; /* Ensure the header is inline for animation */
-  animation: bounceLetters 2s ease infinite;
+    font-family: 'MyCustomFont';
+    letter-spacing: 1px;
+    font-size: 60px;
+    color: #fff;
+    text-align: center;
+    display: inline-block; /* Ensure the header is inline for animation */
+    animation: bounceLetters 2s ease infinite;
 }
 
 @keyframes bounceLetters {
-  0% {
-    transform: translateY(0); /* Start at normal position */
-  }
-  25% {
-    transform: translateY(-10px); /* Bounce up */
-  }
-  50% {
-    transform: translateY(0); /* Back to normal position */
-  }
-  75% {
-    transform: translateY(5px); /* Bounce down */
-  }
-  100% {
-    transform: translateY(0); /* Back to normal position */
-  }
+    0% {
+        transform: translateY(0); /* Start at normal position */
+    }
+    25% {
+        transform: translateY(-10px); /* Bounce up */
+    }
+    50% {
+        transform: translateY(0); /* Back to normal position */
+    }
+    75% {
+        transform: translateY(5px); /* Bounce down */
+    }
+    100% {
+        transform: translateY(0); /* Back to normal position */
+    }
 }
 
 .container p {
-  font-size: 16px;
-  font-weight: 400;
-  color: #fff;
-  max-width: 550px;
-  text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    max-width: 550px;
+    text-align: center;
 }
+
 .container .time-content {
-  display: flex;
-  column-gap: 30px;
-  align-items: center;
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+    justify-content: center; /* Ensures the content is centered */
 }
+
 .time-content .time {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
+
 .time .number,
 .time .text {
-  font-weight: 500;
-  color: #fff;
+    font-weight: 500;
+    color: #fff;
+    align-items: center;
 }
+
 .time .number {
-  font-size: 40px;
+    font-size: 40px;
 }
+
 .time .text {
-  text-transform: capitalize;
-  font-size: 12px;
+    text-transform: capitalize;
+    font-size: 12px;
 }
+
 .email-content {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 30px;
-  width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 100%;
 }
+
 .email-content p {
-  font-size: 13px;
+    font-size: 13px;
 }
+
 .input-box {
-  display: flex;
-  align-items: center;
-  height: 40px;
-  max-width: 360px;
-  width: 100%;
-  margin-top: 20px;
-  column-gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers input and button */
+    height: 40px;
+    max-width: 360px;
+    width: 100%;
+    margin-top: 20px;
+    column-gap: 20px;
 }
+
 .input-box input,
 .input-box button {
-  height: 100%;
-  outline: none;
-  border: none;
-  border: 1px solid #fff;
-  border-radius: 4px;
-  background-color: rgba(255, 255, 255, 0.2);
-  font-weight: 400;
+    height: 100%;
+    outline: none;
+    border: none;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 400;
 }
+
 .input-box input {
-  width: 100%;
-  padding: 0 15px;
-  color: #fff;
+    width: 100%;
+    padding: 0 15px;
+    color: #fff;
 }
+
 input::placeholder {
-  color: #fff;
+    color: #fff;
 }
+
 .input-box button {
-  cursor: pointer;
-  color: #fff;
-  white-space: nowrap;
-  padding: 0 20px;
-  transition: all 0.3s ease;
+    cursor: pointer;
+    color: #fff;
+    white-space: nowrap;
+    padding: 0 20px;
+    transition: all 0.3s ease;
 }
+
 .input-box button:hover {
-  background-color: #fff;
-  color: #0d6a81;
+    background-color: #fff;
+    color: #0d6a81;
 }
+
 @media screen and (max-width: 300px) {
-  .container header {
-    font-size: 50px;
-  }
+    .container header {
+        font-size: 50px;
+    }
 }
