@@ -103,12 +103,6 @@
     height: 100%;
     object-fit: cover;
 }
-img {
-    pointer-events: none;
-    user-drag: none;
-    -webkit-user-drag: none;
-}
-
     
     /* Navigation Bar Styles */
 .navbar {

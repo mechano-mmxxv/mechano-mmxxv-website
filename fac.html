@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mechano MMXXV|About_US</title>
-    <link rel="stylesheet" href="/styles/nav.css">
     <link rel="icon" href="images/model1.jpg" type="image/png">
     <!-- Magnific Popup CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
@@ -211,7 +210,84 @@
             transition: all .2s cubic-bezier(.34,1.12,.68,1.31);
         }
 
-      
+        /* Sticky Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #222;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            color: #3109e4;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: MyCustomFont;
+        }
+
+        .navbar ul li a:hover {
+            color: #0707c3;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .navbar ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 50%;
+    height: 500px;
+    background: rgba(73, 68, 68, 0.6); /* Semi-transparent red background */
+    backdrop-filter: blur(8px); /* Apply blur effect to create the frosted glass look */
+    font-size: 45px;
+    border-radius: 15px; /* Rounded corners for a smoother, modern look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    padding: 20px;
+    transition: all 0.3s ease; /* Smooth transition for interactive changes */
+}
+
+
+            .navbar ul.active {
+                display: flex;
+               
+            }
+
+            .menu-toggle {
+                font-size: 25px;
+                display: block;
+            }
+        }
+
         .gallery {
             min-height: 100vh;
             background: #eee;
@@ -224,36 +300,20 @@
 </head>
 <body>
   <!-- Navigation Bar -->
-  <div class="hero-header">
-    <div class="wrapper">
-        <header>
-            <div class="logo" >
-                <i class="fa-solid fa-"></i>
-                <div class="logo-text" >MECHANO</div>
-            </div>
-            <nav>
-                <div class="togglebtn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul class="navlinks"  style="font-family: 'god', sans-serif;">
-             
-                    <li><a href="workshops.html">Workshops</a></li>
-                    <li><a href="tech.html">Tech Events</a></li>
-                    <li><a href="nontech.html">Non-Tech Events</a></li>
-                    <li><a href="accomadation.html">Accomadation</a></li>
-
-                    <li><a href="dra.html">Sponsors</a></li>
-                    <li><a href="fac.html">About us</a></li>
-                    <li><a href="scroll.html">contact-us</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                  
-             
-                </ul>
-            </nav>
-        </header>
-
+<div class="navbar">
+   <a href="index.html"> <div class="logo">🔙</div></a>
+    <div class="menu-toggle">☰</div>
+    <ul>
+        <li><a href="workshops.html">Workshops</a></li>
+        <li><a href="tech.html">Tech Events</a></li>
+        <li><a href="nontech.html">Non-Tech Events</a></li>
+        <li><a href="accomadation.html">Accomadation</a></li>
+        <li><a href="dra.html">Sponsors</a></li>
+        <li><a href="fac.html">About us</a></li>
+        <li><a href="scroll.html">contact-us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+    </ul>
+</div>
 <div class="gallery">
     <ul class="controls">
         <li class="buttons active" data-filter="all">All</li>
@@ -342,8 +402,6 @@
             <div class="description">Sri.A.V.S.Gowtham<br> 💐💐💐 <br>Assistant Professor(C) & Dept of ME</div>
         </div>
     </div>
-</div>
-</div>
 </div>
 
 <!-- jQuery -->
