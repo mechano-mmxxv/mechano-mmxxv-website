@@ -204,7 +204,7 @@ input, select, textarea {
 	}
 
 		p.major {
-			font-family: "Caveat", serif;
+			font-family:"'Times New Roman','Times','Serif'";
 			font-size: 1.25rem;
 		}
 

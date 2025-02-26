@@ -103,6 +103,9 @@
     height: 100%;
     object-fit: cover;
 }
+.item{
+    color:blue;
+}
     
     /* Navigation Bar Styles */
 .navbar {
