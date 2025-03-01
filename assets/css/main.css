@@ -7,6 +7,40 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+.btn-group{
+    margin:45px 0;
+	
+}
+.btn-group .btn {
+    border-color: #d5d5d5;
+    
+    background-color: #333;
+    padding:0px 25px;
+    margin: 5px 0px;
+    margin-right: 7px;
+    border-radius: 30px;
+    border: 2px solid #e5e5e5;
+    box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+    animation: colorFade 3s infinite; /* Color fade animation */
+}
+
+
+
+@keyframes colorFade {
+    0% {
+        background-color: #333;
+        border-color: #e5e5e5;
+    }
+    50% {
+        background-color: #007ced; /* Change background to blue */
+        border-color: #007ced; /* Change border color to blue */
+    }
+    100% {
+        background-color: #333;
+        border-color: #e5e5e5;
+    }
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
